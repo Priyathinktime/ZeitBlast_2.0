@@ -77,7 +77,10 @@ public class DirectImportPage {
 		WebUI.clickElementWithJs(By.xpath("//button[normalize-space()='Import']"));
 	}
 
-	public void verifyimport() {
+	public void verifyimport()  {
+	
+		wait.until(ExpectedConditions.visibilityOf(WebUI.getWebElement(By.xpath("//div[@role='status']"))));
+		
 		Assert.assertEquals(WebUI.getTextElement(By.xpath("//div[@role='status']")), "Added!");
 
 	}

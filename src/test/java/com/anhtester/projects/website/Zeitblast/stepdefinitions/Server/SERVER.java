@@ -111,7 +111,7 @@ public class SERVER {
 		server.commandinserver("sudo timedatectl set-time '" + date + " 08:00:00'");
 		   Thread.sleep(10000);
 			 server.getcurrenttime();
-		Thread.sleep(70000);
+		Thread.sleep(100000);
 		
 	}
 	

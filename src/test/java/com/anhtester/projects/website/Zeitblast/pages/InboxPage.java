@@ -30,7 +30,7 @@ public class InboxPage {
 
 	}
 
-	public void sendquickreply() {
+	public void sendquickreply() throws InterruptedException {
 //		List<WebElement> msg=WebUI.getWebElements(By.xpath("//p[@id='messageControler-displaynone']"));
 		for (int i = 1; i <= 5; i++) {
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='messageControler-displaynone'])[" + i + "]")));
@@ -39,7 +39,7 @@ public class InboxPage {
 			WebUI.clickElementWithJs(By.xpath(FrameworkConstants.QUICK_REPLY_TEMPLATE));
 //			QA TEST  Smoke test
 			WebUI.clickElement(By.xpath(FrameworkConstants.SEND_BUTTON));
-
+Thread.sleep(1000);
 		}
 	}
 
@@ -117,8 +117,8 @@ public class InboxPage {
 		
 	}
 	public void refresh() throws InterruptedException{
+		Thread.sleep(120000);
 		WebUI.reloadPage();
-		Thread.sleep(10000);
 	}
 	
 	public void clicktheinboxmsg() throws InterruptedException {

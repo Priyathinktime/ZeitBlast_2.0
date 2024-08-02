@@ -65,7 +65,8 @@ SkipTracePage skiptracepage;
 		directimport.clickimport();
 		}
 	@Then("The excel file has to be imported")
-	public void the_excel_file_has_to_be_imported(){
+	public void the_excel_file_has_to_be_imported() throws InterruptedException{
+		Thread.sleep(30000);
 		directimport.verifyimport();
 	}
 	
@@ -183,7 +184,7 @@ public void t_he_user_assigns_the_prospects_to_the_created_campaign_in_the_direc
 	batches.clickbatch();
 	batches.Selectcamaign();
 //	batches.createbatch("Test Automation Smoke");
-	batches.createbatch("QA initial message");
+	batches.createbatch("QA Template 2");
 //	batches.createbatch("Karachi02");
    
 }

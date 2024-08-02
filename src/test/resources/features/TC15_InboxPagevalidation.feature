@@ -23,7 +23,7 @@ Scenario: 02 Change the Time Zone to UTC
  Scenario: 03 To upload an Excel in the Direct Import Page
     Given The user logs in the Zeitblast application with "super admin" credentials
     When The user navigate to the direct import page from the home page
-    And The user upload the excel file "AutomationData100.xlsx" in the import file field
+    And The user upload the excel file "automationData200lead.xlsx" in the import file field
     And The user import the excel file by clicking the import button
     Then The excel file has to be imported
     And The user logs out from the Zeitblast application

@@ -101,7 +101,7 @@ public class UI {
 
 	}
 	@When("The User should select the leads to send the quick reply")
-	public void The_User_should_select_the_leads_to_send_the_quick_reply() {
+	public void The_User_should_select_the_leads_to_send_the_quick_reply() throws InterruptedException {
 		inbox.sendquickreply();
 	}
 	@When("The User should select the leads to send the Drips")
@@ -131,7 +131,7 @@ public class UI {
 	 
 	 @Then("The user should wait for a minute and observe a expired tag")
 	 public void expiredtagvalidation() throws InterruptedException {
-		 Thread.sleep(120000);
+		 Thread.sleep(12000);
 		 inbox.clicktheinboxmsg();
 		 inbox.refresh();
 		 inbox.expiretag();
